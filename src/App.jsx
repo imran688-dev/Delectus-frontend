@@ -3,6 +3,7 @@ import './App.css'
 import { useState } from 'react';
 
 
+
 function App() {
   const [blogs, setBlogs] = useState([]);
 
@@ -23,12 +24,12 @@ function App() {
           blogs.map((blog) => (
             <div key={blog.id} className='shadow mb-5 p-10 text-center'>
               <h2 className='mb-3 text-red-500 font-semibold text-2xl'>{blog.attributes.Title}</h2>
-              < img src={`http://localhost:1337${blog.attributes.Image.data[0].attributes.url}`} alt="" />
+              <img src={`http://localhost:1337${blog.attributes.Image.data[0].attributes.url}`} alt="" />
               <p className='mt-6 text-justify'>{blog.attributes.Description[0].children[0].text}</p>
             </div>
           ))
         }
-      </section >
+      </section>
     </>
   )
 }
