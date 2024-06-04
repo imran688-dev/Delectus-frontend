@@ -1,24 +1,35 @@
-import { useEffect } from 'react'
+// import { useEffect } from 'react'
 import './App.css'
-import { useState } from 'react';
+// import { useState } from 'react';
 
 
 function App() {
-  const [blogs, setBlogs] = useState([]);
+  // const [blogs, setBlogs] = useState([]);
 
-  useEffect(() => {
-    fetch("http://localhost:1337/api/blogs?populate=*").then((res) => res.json())
-      .then((data) => {
-        console.log("strapi blogs:", data.data);
-        setBlogs(data.data);
-        // console.log(`http://localhost:1337${data.data[0].attributes.Image.data[0].attributes.url}`);
-        // console.log(data.data[0].attributes.Title);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:1337/api/blogs?populate=*").then((res) => res.json())
+  //     .then((data) => {
+  //       console.log("strapi blogs:", data.data);
+  //       setBlogs(data.data);
+  //       // console.log(`http://localhost:1337${data.data[0].attributes.Image.data[0].attributes.url}`);
+  //       // console.log(data.data[0].attributes.Title);
+  //     });
+  // }, []);
+
+
+
 
   return (
     <>
-      <section className='max-w-[700px] p-20 mx-auto'>
+
+
+
+
+
+
+
+
+      {/* <section className='max-w-[700px] p-20 mx-auto'>
         {
           blogs.map((blog) => (
             <div key={blog.id} className='shadow mb-5 p-10 text-center'>
@@ -28,7 +39,7 @@ function App() {
             </div>
           ))
         }
-      </section >
+      </section> */}
     </>
   )
 }
