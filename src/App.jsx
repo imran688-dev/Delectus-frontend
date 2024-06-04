@@ -16,4 +16,3 @@ function App() {
 
 export default App
 
-// 45: 12 / 1: 46: 22
