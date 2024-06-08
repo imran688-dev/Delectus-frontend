@@ -6,4 +6,3 @@ export default function Notfound() {
     </div>
   )
 }
-// 39: 58 / 1: 46: 22
