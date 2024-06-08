@@ -29,6 +29,7 @@ export default function useFetch(url) {
 
 }
 
+
 // useEffect(() => {
 //   fetch("http://localhost:1337/api/blogs?populate=*").then((res) => res.json())
 //     .then((data) => {
