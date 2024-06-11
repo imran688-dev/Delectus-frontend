@@ -1,8 +1,15 @@
+import AboutSection from "../components/Home/AboutSection";
+import BlogSection from "../components/Home/BlogSection";
+import ContactSection from "../components/Home/ContactSection";
+import Hero from "../components/Home/Hero";
 
 export default function Home() {
   return (
-    <div>
-      <h1 className="text-3xl text-center mt-3 text-red-500">Hello Farabi Ahmed Imran!🥰</h1>
-    </div>
+    <>
+      <Hero />
+      <AboutSection />
+      <BlogSection />
+      <ContactSection />
+    </>
   )
 }
