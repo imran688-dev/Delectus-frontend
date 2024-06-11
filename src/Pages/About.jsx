@@ -1,10 +1,10 @@
+import AboutSection from "../components/Home/AboutSection";
 
 export default function About() {
-  
-  return (
-    <div>
-      About page
 
-    </div>
+  return (
+    <>
+      <AboutSection />
+    </>
   )
 }

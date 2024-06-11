@@ -1,8 +1,9 @@
+import BlogSection from "../components/Home/BlogSection";
 
 export default function Blog() {
   return (
-    <div>
-      Blog page
-    </div>
+    <>
+      <BlogSection />
+    </>
   )
 }
