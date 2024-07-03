@@ -9,6 +9,7 @@ import Blog from './Pages/Blog'
 import Contact from './Pages/Contact'
 import Notfound from './Pages/Notfound'
 import Footer from './components/Footer/Footer'
+import SingleBlogPage from './components/Blog/SingleBlogPage'
 
 
 
@@ -24,6 +25,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/service' element={<Service />} />
         <Route path='/blog' element={<Blog />} />
+        <Route path='/blog/:id' element={<SingleBlogPage />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/*' element={<Notfound />} />
       </Routes>

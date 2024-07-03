@@ -12,9 +12,14 @@ export default function useFetch(url) {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get(url);
-        console.log(response.data);
-        setData(response.data);
+        const response = await axios.get(url, {
+          headers: {
+            Authorization: `Bearer ${import.meta.env.VITE_APP_API_TOKEN}`
+          }
+        }
+        );
+        console.log('API Response:', response.data.data);
+        setData(response.data.data);
       } catch (err) {
         console.log(err);
         setError(err);
