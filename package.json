@@ -10,7 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@strapi/blocks-react-renderer": "^1.0.1",
+    "@tailwindcss/typography": "^0.5.13",
     "axios": "^1.7.2",
+    "husky": "^9.0.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1"
