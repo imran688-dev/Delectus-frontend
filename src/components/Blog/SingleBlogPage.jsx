@@ -2,6 +2,8 @@ import { Link, useParams } from "react-router-dom"
 import useFetch from "../../hooks/useFetch";
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import Tag from "./Tag";
+import Loader from "../Loader";
+import Error from "../Error";
 
 
 export default function SingleBlogPage() {
@@ -12,22 +14,13 @@ export default function SingleBlogPage() {
 
   if (loading) {
     return (
-      <div className="max-w-6xl mx-auto text-center py-44">
-        <h2 className="text-center text-xl text-indigo-400 uppercase">
-          Loading.....
-        </h2>
-      </div>
+      <Loader />
     );
   }
 
   if (error) {
     return (
-      <div className="max-w-6xl mx-auto text-center py-44">
-        <h2 className="text-center text-xl text-slate-700 font-semibold capitalize">
-          Something went wrong!
-        </h2>
-        <h1 className="text-8xl text-slate-300 uppercase mt-3">Opps😕</h1>
-      </div>
+      <Error />
     );
   }
 

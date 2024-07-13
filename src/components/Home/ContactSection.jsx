@@ -4,7 +4,7 @@ export default function ContactSection() {
     <>
       <section className="bg-gray-100">
         <div className="mx-auto max-w-screen-xl px-4 py-20 sm:px-6 lg:px-8">
-          <h2 className="text-indigo-700 text-2xl font-semibold inline-block underline ">Contact Us</h2>
+          <h2 className="text-indigo-700 text-2xl font-semibold inline-block ">Contact Us</h2>
           <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
             <div className="lg:col-span-2 lg:py-12 mt-12">
               <p className="max-w-xl text-lg">

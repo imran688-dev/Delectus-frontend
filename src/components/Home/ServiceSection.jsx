@@ -2,289 +2,369 @@
 export default function ServiceSection() {
   return (
     <>
-      <section>
-        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-          <header>
-            <h2 className="text-xl font-bold text-indigo-700 sm:text-3xl">Product Collection</h2>
+      <div className="max-w-screen-xl mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 md:gap-8">
+          <div className="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm">
+            <div className="p-6 sm:px-8">
+              <h2 className="text-lg font-medium text-gray-900">
+                Starter
+                <span className="sr-only">Plan</span>
+              </h2>
 
-            <p className="mt-4 max-w-md text-gray-500">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque praesentium cumque iure
-              dicta incidunt est ipsam, officia dolor fugit natus?
-            </p>
-          </header>
+              <p className="mt-2 text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-          <div className="mt-8 sm:flex sm:items-center sm:justify-between">
-            <div className="block sm:hidden">
-              <button
-                className="flex cursor-pointer items-center gap-2 border-b border-gray-400 pb-1 text-gray-900 transition hover:border-gray-600"
+              <p className="mt-2 sm:mt-4">
+                <strong className="text-3xl font-bold text-gray-900 sm:text-4xl"> 20$ </strong>
+
+                <span className="text-sm font-medium text-gray-700">/month</span>
+              </p>
+
+              <a
+                className="mt-4 block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:mt-6"
+                href="#"
               >
-                <span className="text-sm font-medium"> Filters & Sorting </span>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="size-4 rtl:rotate-180"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                </svg>
-              </button>
+                Get Started
+              </a>
             </div>
 
-            <div className="hidden sm:flex sm:gap-4">
-              <div className="relative">
-                <details className="group [&_summary::-webkit-details-marker]:hidden">
-                  <summary
-                    className="flex cursor-pointer items-center gap-2 border-b border-gray-400 pb-1 text-gray-900 transition hover:border-gray-600"
+            <div className="p-6 sm:px-8">
+              <p className="text-lg font-medium text-gray-900 sm:text-xl">What's included:</p>
+
+              <ul className="mt-2 space-y-2 sm:mt-4">
+                <li className="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-5 text-indigo-700"
                   >
-                    <span className="text-sm font-medium text-indigo-600"> Availability </span>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
 
-                    <span className="transition group-open:-rotate-180">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth="1.5"
-                        stroke="currentColor"
-                        className="h-4 w-4"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                        />
-                      </svg>
-                    </span>
-                  </summary>
+                  <span className="text-gray-700"> 10 users </span>
+                </li>
 
-                  <div
-                    className="z-50 group-open:absolute group-open:top-auto group-open:mt-2 ltr:group-open:start-0"
+                <li className="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-5 text-indigo-700"
                   >
-                    <div className="w-96 rounded border border-gray-200 bg-white">
-                      <header className="flex items-center justify-between p-4">
-                        <span className="text-sm text-gray-700"> 0 Selected </span>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
 
-                        <button type="button" className="text-sm text-gray-900 underline underline-offset-4">
-                          Reset
-                        </button>
-                      </header>
+                  <span className="text-gray-700"> 2GB of storage </span>
+                </li>
 
-                      <ul className="space-y-1 border-t border-gray-200 p-4">
-                        <li>
-                          <label htmlFor="FilterInStock" className="inline-flex items-center gap-2">
-                            <input
-                              type="checkbox"
-                              id="FilterInStock"
-                              className="size-5 rounded border-gray-300"
-                            />
-
-                            <span className="text-sm font-medium text-gray-700"> In Stock (5+) </span>
-                          </label>
-                        </li>
-
-                        <li>
-                          <label htmlFor="FilterPreOrder" className="inline-flex items-center gap-2">
-                            <input
-                              type="checkbox"
-                              id="FilterPreOrder"
-                              className="size-5 rounded border-gray-300"
-                            />
-
-                            <span className="text-sm font-medium text-gray-700"> Pre Order (3+) </span>
-                          </label>
-                        </li>
-
-                        <li>
-                          <label htmlFor="FilterOutOfStock" className="inline-flex items-center gap-2">
-                            <input
-                              type="checkbox"
-                              id="FilterOutOfStock"
-                              className="size-5 rounded border-gray-300"
-                            />
-
-                            <span className="text-sm font-medium text-gray-700"> Out of Stock (10+) </span>
-                          </label>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </details>
-              </div>
-
-              <div className="relative">
-                <details className="group [&_summary::-webkit-details-marker]:hidden">
-                  <summary
-                    className="flex cursor-pointer items-center gap-2 border-b border-gray-400 pb-1 text-gray-900 transition hover:border-gray-600"
+                <li className="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-5 text-indigo-700"
                   >
-                    <span className="text-sm font-medium text-indigo-600"> Price </span>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
 
-                    <span className="transition group-open:-rotate-180">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth="1.5"
-                        stroke="currentColor"
-                        className="h-4 w-4"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                        />
-                      </svg>
-                    </span>
-                  </summary>
+                  <span className="text-gray-700"> Email support </span>
+                </li>
 
-                  <div
-                    className="z-50 group-open:absolute group-open:top-auto group-open:mt-2 ltr:group-open:start-0"
+                <li className="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-5 text-red-700"
                   >
-                    <div className="w-96 rounded border border-gray-200 bg-white">
-                      <header className="flex items-center justify-between p-4">
-                        <span className="text-sm text-gray-700"> The highest price is $600 </span>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
 
-                        <button type="button" className="text-sm text-gray-900 underline underline-offset-4">
-                          Reset
-                        </button>
-                      </header>
+                  <span className="text-gray-700"> Help center access </span>
+                </li>
 
-                      <div className="border-t border-gray-200 p-4">
-                        <div className="flex justify-between gap-4">
-                          <label htmlFor="FilterPriceFrom" className="flex items-center gap-2">
-                            <span className="text-sm text-gray-600">$</span>
+                <li className="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-5 text-red-700"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
 
-                            <input
-                              type="number"
-                              id="FilterPriceFrom"
-                              placeholder="From"
-                              className="w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                            />
-                          </label>
+                  <span className="text-gray-700"> Phone support </span>
+                </li>
 
-                          <label htmlFor="FilterPriceTo" className="flex items-center gap-2">
-                            <span className="text-sm text-gray-600">$</span>
+                <li className="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-5 text-red-700"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
 
-                            <input
-                              type="number"
-                              id="FilterPriceTo"
-                              placeholder="To"
-                              className="w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                            />
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </details>
-              </div>
-            </div>
-
-            <div className="hidden sm:block">
-              <label htmlFor="SortBy" className="sr-only">SortBy</label>
-
-              <select id="SortBy" className="h-10 rounded border-gray-300 text-sm">
-                <option>Sort By</option>
-                <option value="Title, DESC">Title, DESC</option>
-                <option value="Title, ASC">Title, ASC</option>
-                <option value="Price, DESC">Price, DESC</option>
-                <option value="Price, ASC">Price, ASC</option>
-              </select>
+                  <span className="text-gray-700"> Community access </span>
+                </li>
+              </ul>
             </div>
           </div>
 
-          <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <li>
-              <a href="#" className="group block overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                  alt=""
-                  className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
-                />
+          <div className="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm">
+            <div className="p-6 sm:px-8">
+              <h2 className="text-lg font-medium text-gray-900">
+                Pro
+                <span className="sr-only">Plan</span>
+              </h2>
 
-                <div className="relative bg-white pt-3">
-                  <h3 className="text-xs text-indigo-700 group-hover:underline group-hover:underline-offset-4">
-                    Basic Tee
-                  </h3>
+              <p className="mt-2 text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-                  <p className="mt-2">
-                    <span className="sr-only"> Regular Price </span>
+              <p className="mt-2 sm:mt-4">
+                <strong className="text-3xl font-bold text-gray-900 sm:text-4xl"> 30$ </strong>
 
-                    <span className="tracking-wider text-gray-900"> £24.00 GBP </span>
-                  </p>
-                </div>
+                <span className="text-sm font-medium text-gray-700">/month</span>
+              </p>
+
+              <a
+                className="mt-4 block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:mt-6"
+                href="#"
+              >
+                Get Started
               </a>
-            </li>
+            </div>
 
-            <li>
-              <a href="#" className="group block overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                  alt=""
-                  className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
-                />
+            <div className="p-6 sm:px-8">
+              <p className="text-lg font-medium text-gray-900 sm:text-xl">What's included:</p>
 
-                <div className="relative bg-white pt-3">
-                  <h3 className="text-xs text-indigo-700 group-hover:underline group-hover:underline-offset-4">
-                    Basic Tee
-                  </h3>
+              <ul className="mt-2 space-y-2 sm:mt-4">
+                <li className="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-5 text-indigo-700"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
 
-                  <p className="mt-2">
-                    <span className="sr-only"> Regular Price </span>
+                  <span className="text-gray-700"> 20 users </span>
+                </li>
 
-                    <span className="tracking-wider text-gray-900"> £24.00 GBP </span>
-                  </p>
-                </div>
+                <li className="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-5 text-indigo-700"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+
+                  <span className="text-gray-700"> 5GB of storage </span>
+                </li>
+
+                <li className="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-5 text-indigo-700"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+
+                  <span className="text-gray-700"> Email support </span>
+                </li>
+
+                <li className="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-5 text-indigo-700"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+
+                  <span className="text-gray-700"> Help center access </span>
+                </li>
+
+                <li className="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-5 text-red-700"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+
+                  <span className="text-gray-700"> Phone support </span>
+                </li>
+
+                <li className="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-5 text-red-700"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+
+                  <span className="text-gray-700"> Community access </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm">
+            <div className="p-6 sm:px-8">
+              <h2 className="text-lg font-medium text-gray-900">
+                Enterprise
+                <span className="sr-only">Plan</span>
+              </h2>
+
+              <p className="mt-2 text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+              <p className="mt-2 sm:mt-4">
+                <strong className="text-3xl font-bold text-gray-900 sm:text-4xl"> 100$ </strong>
+
+                <span className="text-sm font-medium text-gray-700">/month</span>
+              </p>
+
+              <a
+                className="mt-4 block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:mt-6"
+                href="#"
+              >
+                Get Started
               </a>
-            </li>
+            </div>
 
-            <li>
-              <a href="#" className="group block overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                  alt=""
-                  className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
-                />
+            <div className="p-6 sm:px-8">
+              <p className="text-lg font-medium text-gray-900 sm:text-xl">What's included:</p>
 
-                <div className="relative bg-white pt-3">
-                  <h3 className="text-xs text-indigo-700 group-hover:underline group-hover:underline-offset-4">
-                    Basic Tee
-                  </h3>
+              <ul className="mt-2 space-y-2 sm:mt-4">
+                <li className="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-5 text-indigo-700"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
 
-                  <p className="mt-2">
-                    <span className="sr-only"> Regular Price </span>
+                  <span className="text-gray-700"> 50 users </span>
+                </li>
 
-                    <span className="tracking-wider text-gray-900"> £24.00 GBP </span>
-                  </p>
-                </div>
-              </a>
-            </li>
+                <li className="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-5 text-indigo-700"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
 
-            <li>
-              <a href="#" className="group block overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                  alt=""
-                  className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
-                />
+                  <span className="text-gray-700"> 20GB of storage </span>
+                </li>
 
-                <div className="relative bg-white pt-3">
-                  <h3 className="text-xs text-indigo-700 group-hover:underline group-hover:underline-offset-4">
-                    Basic Tee
-                  </h3>
+                <li className="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-5 text-indigo-700"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
 
-                  <p className="mt-2">
-                    <span className="sr-only"> Regular Price </span>
+                  <span className="text-gray-700"> Email support </span>
+                </li>
 
-                    <span className="tracking-wider text-gray-900"> £24.00 GBP </span>
-                  </p>
-                </div>
-              </a>
-            </li>
-          </ul>
+                <li className="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-5 text-indigo-700"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+
+                  <span className="text-gray-700"> Help center access </span>
+                </li>
+
+                <li className="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-5 text-indigo-700"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+
+                  <span className="text-gray-700"> Phone support </span>
+                </li>
+
+                <li className="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-5 text-indigo-700"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+
+                  <span className="text-gray-700"> Community access </span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
     </>
   )
 }

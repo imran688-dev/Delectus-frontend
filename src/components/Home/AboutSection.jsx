@@ -4,8 +4,9 @@ export default function AboutSection() {
   return (
     <>
       <section>
-        <h2 className="text-indigo-700 text-2xl font-semibold underline ml-[65px] mt-[60px] absolute">About</h2>
+
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+          <h2 className="text-indigo-700 text-2xl font-semibold mt-[40px] absolute">About</h2>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
             <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
               <img
