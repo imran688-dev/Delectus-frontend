@@ -1,7 +1,88 @@
+import { useState } from "react"
+import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast';
+
 
 export default function ContactSection() {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(
+      (prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+  };
+
+  const postContactData = (e) => {
+    e.preventDefault(),
+      console.log(formData);
+
+    const contactData = {
+      data: {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+      }
+    }
+
+    axios.post(`${import.meta.env.VITE_APP_URL}/api/contact-forms`, contactData, {
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    }).then(function (response) {
+      console.log(response);
+      toast.success('Form submitted Successfully!');
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+
+    }).catch(function (error) {
+      console.log(error);
+      toast.error("Something went wrong! Please try again later");
+    });
+
+  }
+
+
+
   return (
     <>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+        gutter={8}
+        containerClassName=""
+        containerStyle={{}}
+        toastOptions={{
+          duration: 5000,
+          style: {
+            background: '#363636',
+            color: '#fff',
+          },
+
+          // Default options for specific types
+          success: {
+            duration: 3000,
+            theme: {
+              primary: 'green',
+              secondary: 'black',
+            },
+          },
+        }}
+      />
+
       <section className="bg-gray-100">
         <div className="mx-auto max-w-screen-xl px-4 py-20 sm:px-6 lg:px-8">
           <h2 className="text-indigo-700 text-2xl font-semibold inline-block ">Contact Us</h2>
@@ -14,14 +95,16 @@ export default function ContactSection() {
               </p>
 
               <div className="mt-8">
-                <a href="#" className="text-2xl font-bold text-indigo-700"> 0151 475 4450 </a>
+                <a href="#" className="text-2xl font-bold text-indigo-700"> 01311347688 </a>
 
-                <address className="mt-2 not-italic">282 Kevin Brook, Imogeneborough, CA 58517</address>
+                <address className="mt-2 not-italic">
+                  Dakhhin Dharandi, Kamlapur, Patuakhali, Bangladesh
+                </address>
               </div>
             </div>
 
             <div className="rounded-lg bg-white p-8 mb-5 shadow-lg lg:col-span-3 lg:p-12">
-              <form action="#" className="space-y-4">
+              <form action="#" className="space-y-4" onSubmit={postContactData}>
                 <div>
                   <label className="sr-only" htmlFor="name">Name</label>
                   <input
@@ -29,6 +112,9 @@ export default function ContactSection() {
                     placeholder="Name"
                     type="text"
                     id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                   />
                 </div>
 
@@ -40,6 +126,9 @@ export default function ContactSection() {
                       placeholder="Email address"
                       type="email"
                       id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
                     />
                   </div>
 
@@ -50,6 +139,9 @@ export default function ContactSection() {
                       placeholder="Phone Number"
                       type="tel"
                       id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -62,6 +154,9 @@ export default function ContactSection() {
                     placeholder="Message"
                     rows="6"
                     id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                   ></textarea>
                 </div>
 

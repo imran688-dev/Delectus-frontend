@@ -15,9 +15,9 @@ export default function PricingCard({ service }) {
             <span className="sr-only">Plan</span>
           </h2>
 
-          <p className="mt-2 text-gray-700">
+          {/* <p className="mt-2 text-gray-700">
             {data.description}
-          </p>
+          </p> */}
 
           <p className="mt-2 sm:mt-4">
             <strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
